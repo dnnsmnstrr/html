@@ -7,7 +7,23 @@ td {
   padding: 5px
 }
 
-navigation {
-  width: 100%;
+.navigation {
+  display: flex;
   justify-content: center;
+}
+
+/* images */
+.content-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-text {
+  width: 300px;
+  display:block;
+}
+
+.image-bottom {
+  display:flex;
+  align-items: flex-end;
 }
