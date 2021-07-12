@@ -6,9 +6,10 @@ document.onkeydown = checkKey;
 
 const dict = {
   b: 'image',
+  i: 'image',
   l: 'list',
   t: 'table',
-  h: 'text'
+  p: 'text'
 }
 
 function checkKey(e) {

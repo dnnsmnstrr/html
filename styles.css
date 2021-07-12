@@ -10,6 +10,7 @@ td {
 .navigation {
   display: flex;
   justify-content: center;
+  padding-top: 20px;
 }
 
 /* images */
