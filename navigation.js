@@ -2,6 +2,10 @@ const left = document.currentScript.getAttribute('left');
 const home = document.currentScript.getAttribute('home') || 'Home';
 const right = document.currentScript.getAttribute('right');
 
+const redirect = document.currentScript.getAttribute('redirect');
+if (redirect) {
+  window.location.assign("./" + redirect + ".html")
+}
 document.onkeydown = checkKey;
 
 const dict = {
@@ -34,6 +38,9 @@ function checkKey(e) {
         break;
       case "ArrowDown":
         window.location.assign("./" + right + ".html")
+        break;
+      case "?":
+        window.alert('Diese Seite kann mithilfe der Tastatur navigiert werden. \n Versuchen Sie es mit den Pfeiltasten oder einem der Anfangsbuchstaben der Seiten ("b", "l", "t", "p") \n Mit "h" gelangen Sie zurück auf die Hauptseite.')
         break;
       case "h":
         //go home
