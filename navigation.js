@@ -8,6 +8,31 @@ if (redirect) {
 }
 document.onkeydown = checkKey;
 
+/* Get the documentElement (<html>) to display the page in fullscreen */
+var elem = document.documentElement;
+
+/* View in fullscreen */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+/* Close fullscreen */
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+
 const dict = {
   b: 'image',
   i: 'image',
@@ -26,18 +51,27 @@ function checkKey(e) {
         window.location.assign("./" + foundMatch + ".html")
       }
     }
-    switch (event.key) {
-      case "ArrowLeft":
+
+    const goLeft = () => {
+      if (left) {
         window.location.assign("./" + left + ".html")
-        break;
-      case "ArrowRight":
+      }
+    }
+
+    const goRight = () => {
+      if (right) {
         window.location.assign("./" + right + ".html")
-        break;
+      }
+    }
+
+    switch (event.key) {
       case "ArrowUp":
-        window.location.assign("./" + left + ".html")
+      case "ArrowLeft":
+        goLeft()
         break;
       case "ArrowDown":
-        window.location.assign("./" + right + ".html")
+      case "ArrowRight":
+        goRight()
         break;
       case "?":
         window.alert('Diese Seite kann mithilfe der Tastatur navigiert werden. \n Versuchen Sie es mit den Pfeiltasten oder einem der Anfangsbuchstaben der Seiten ("b", "l", "t", "p") \n Mit "h" gelangen Sie zurück auf die Hauptseite.')
@@ -45,6 +79,12 @@ function checkKey(e) {
       case "h":
         //go home
         window.location.assign("./index.html")
+        break;
+      case "f":
+        openFullscreen()
+        break;
+      case "Escape":
+        closeFullscreen()
         break;
       default: matchLetterPress(event.key)
     }
