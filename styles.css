@@ -6,3 +6,8 @@ table, th, td {
 td {
   padding: 5px
 }
+
+navigation {
+  width: 100%;
+  justify-content: center;
+}
