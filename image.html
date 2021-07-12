@@ -6,16 +6,42 @@
     <title>Bilder</title>
   </head>
   <body>
-    <img src="https://picsum.photos/1000?random=1" style="width:100%"/>
+    <h1>Alternativer Text</h1>
+    <img src="https://picsum.photos/1000?random=1" style="width:100%;height:200px" alt="Dies ist ein Alternativtext"/>
+
+    <h1>Bild in Text</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-      <img src="https://picsum.photos/1000?random=2" style="width:100%"/>
+      <img src="https://picsum.photos/300?random=2" style="width:100%"/>
       in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
+
+    <p>
+      <img src="https://picsum.photos/200?random=2" style="float:right"/>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+
+    <h1>Bild als Link</h1>
+    <a href=".index.html">
+      <img src="https://picsum.photos/200?random=3" alt="This is a link">
+    </a>
+
+    <h1>Image map</h1>
+    <img src="https://picsum.photos/id/2/400" alt="Dieses Bild enthält verschiedene Links" usemap="#map">
+    <map name="map">
+      <area shape="rect" coords="100,44,380,200" alt="Computer" href="https://apple.com">
+      <area shape="rect" coords="0,125,90,180" alt="Pen" href="phone.htm">
+      <area shape="circle" coords="305,300,44" alt="Cup of coffee" href="https://starbucks.de">
+    </map>
     <br>
-    <a href="./list.html"><-</a>
-    <a href="./index.html">Home</a>
-    <a href="./text.html">-></a>
+    <div class="navigation">
+      <a href="./list.html"><-</a>
+      <a href="./index.html">Home</a>
+      <a href="./text.html">-></a>
+    </div>
   </body>
 </html>
